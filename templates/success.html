@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Submission Results</title>
+</head>
+<body>
+    <h1>Submission Results</h1>
+    <ul>
+        {% for e in entries %}
+            <li>
+                SO: {{ e.so }} - Valid: {{ 'Yes' if e.valid else 'No' }}
+                <pre>{{ e.text }}</pre>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

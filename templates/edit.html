@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Edit PO Data</title>
+</head>
+<body>
+    <h1>Edit OCR Results</h1>
+    <form action="/submit" method="post">
+        {% for item in results %}
+            <h3>{{ item.file }}</h3>
+            <textarea name="text_{{ loop.index0 }}" rows="10" cols="80">{{ item.text }}</textarea>
+            <hr>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
